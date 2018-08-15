@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeHumanMhx2Merger", "MakeHumanMhx2Merger\MakeHumanMhx2Merger.csproj", "{19375CD5-F500-44B4-BE54-F069D9D494E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19375CD5-F500-44B4-BE54-F069D9D494E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19375CD5-F500-44B4-BE54-F069D9D494E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19375CD5-F500-44B4-BE54-F069D9D494E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19375CD5-F500-44B4-BE54-F069D9D494E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A407CE7B-0B0E-47FA-90D5-2E5DC98D6FA2}
+	EndGlobalSection
+EndGlobal
