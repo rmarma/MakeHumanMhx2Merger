@@ -199,6 +199,7 @@
             this.listBoxSkeletonRight.Size = new System.Drawing.Size(264, 95);
             this.listBoxSkeletonRight.TabIndex = 1;
             this.listBoxSkeletonRight.SelectedIndexChanged += new System.EventHandler(this.ListBoxSkeletonRight_SelectedIndexChanged);
+            this.listBoxSkeletonRight.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listBoxSkeletonRight_KeyUp);
             // 
             // listBoxSkeletonLeft
             // 
@@ -210,6 +211,7 @@
             this.listBoxSkeletonLeft.Size = new System.Drawing.Size(264, 95);
             this.listBoxSkeletonLeft.TabIndex = 0;
             this.listBoxSkeletonLeft.SelectedIndexChanged += new System.EventHandler(this.ListBoxSkeletonLeft_SelectedIndexChanged);
+            this.listBoxSkeletonLeft.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListBoxSkeletonLeft_KeyUp);
             // 
             // groupBoxMaterials
             // 
@@ -246,6 +248,7 @@
             this.listBoxMaterialsRight.Size = new System.Drawing.Size(264, 95);
             this.listBoxMaterialsRight.TabIndex = 2;
             this.listBoxMaterialsRight.SelectedIndexChanged += new System.EventHandler(this.ListBoxMaterialsRight_SelectedIndexChanged);
+            this.listBoxMaterialsRight.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListBoxMaterialsRight_KeyUp);
             // 
             // buttonMaterialsRightToLeft
             // 
@@ -267,6 +270,7 @@
             this.listBoxMaterialsLeft.Size = new System.Drawing.Size(264, 95);
             this.listBoxMaterialsLeft.TabIndex = 1;
             this.listBoxMaterialsLeft.SelectedIndexChanged += new System.EventHandler(this.ListBoxMaterialsLeft_SelectedIndexChanged);
+            this.listBoxMaterialsLeft.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListBoxMaterialsLeft_KeyUp);
             // 
             // groupBoxGeometries
             // 
@@ -303,6 +307,7 @@
             this.listBoxGeometriesRight.Size = new System.Drawing.Size(264, 95);
             this.listBoxGeometriesRight.TabIndex = 4;
             this.listBoxGeometriesRight.SelectedIndexChanged += new System.EventHandler(this.ListBoxGeometriesRight_SelectedIndexChanged);
+            this.listBoxGeometriesRight.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListBoxGeometriesRight_KeyUp);
             // 
             // buttonGeometriesRightToLeft
             // 
@@ -324,6 +329,7 @@
             this.listBoxGeometriesLeft.Size = new System.Drawing.Size(264, 95);
             this.listBoxGeometriesLeft.TabIndex = 3;
             this.listBoxGeometriesLeft.SelectedIndexChanged += new System.EventHandler(this.ListBoxGeometriesLeft_SelectedIndexChanged);
+            this.listBoxGeometriesLeft.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListBoxGeometriesLeft_KeyUp);
             // 
             // openFileDialogMain
             // 

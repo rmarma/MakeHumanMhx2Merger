@@ -96,5 +96,21 @@ namespace MakeHumanMhx2Merger
         {
             json.GetJSONArray("geometries").Put(obj);
         }
+
+
+        public void DeleteSkeletonBone(int index)
+        {
+            json.GetJSONObject("skeleton").GetJSONArray("bones").Remove(index);
+        }
+
+        public void DeleteMaterial(int index)
+        {
+            json.GetJSONArray("materials").Remove(index);
+        }
+
+        public void DeleteGeometry(int index)
+        {
+            json.GetJSONArray("geometries").Remove(index);
+        }
     }
 }

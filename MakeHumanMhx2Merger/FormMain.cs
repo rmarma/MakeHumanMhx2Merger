@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -126,6 +127,40 @@ namespace MakeHumanMhx2Merger
         }
 
 
+        private void DeleteSelectedSkeletonBones(ListBox listBox, Mhx2Model mhx2)
+        {
+            for (int i = listBox.SelectedIndices.Count - 1; i >= 0; --i)
+            {
+                mhx2.DeleteSkeletonBone(listBox.SelectedIndices[i]);
+            }
+            listBox.ClearSelected();
+            listBox.Items.Clear();
+            listBox.Items.AddRange(mhx2.GetSkeletonBoneNames());
+        }
+
+        private void DeleteSelectedMaterials(ListBox listBox, Mhx2Model mhx2)
+        {
+            for (int i = listBox.SelectedIndices.Count - 1; i >= 0; --i)
+            {
+                mhx2.DeleteMaterial(listBox.SelectedIndices[i]);
+            }
+            listBox.ClearSelected();
+            listBox.Items.Clear();
+            listBox.Items.AddRange(mhx2.GetMaterialNames());
+        }
+
+        private void DeleteSelectedGeometries(ListBox listBox, Mhx2Model mhx2)
+        {
+            for (int i = listBox.SelectedIndices.Count - 1; i >= 0; --i)
+            {
+                mhx2.DeleteGeometry(listBox.SelectedIndices[i]);
+            }
+            listBox.ClearSelected();
+            listBox.Items.Clear();
+            listBox.Items.AddRange(mhx2.GetGeometryNames());
+        }
+
+
 
 
         private void ListBoxSkeletonLeft_SelectedIndexChanged(object sender, EventArgs e)
@@ -205,6 +240,54 @@ namespace MakeHumanMhx2Merger
             if (saveFileDialogMain.ShowDialog() == DialogResult.OK)
             {
                 mhx2Right.Save(saveFileDialogMain.FileName);
+            }
+        }
+
+        private void ListBoxMaterialsLeft_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedMaterials(listBoxMaterialsLeft, mhx2Left);
+            }
+        }
+
+        private void ListBoxSkeletonLeft_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedSkeletonBones(listBoxSkeletonLeft, mhx2Left);
+            }
+        }
+
+        private void ListBoxGeometriesLeft_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedGeometries(listBoxGeometriesLeft, mhx2Left);
+            }
+        }
+
+        private void listBoxSkeletonRight_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedSkeletonBones(listBoxSkeletonRight, mhx2Right);
+            }
+        }
+
+        private void ListBoxMaterialsRight_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedMaterials(listBoxMaterialsRight, mhx2Right);
+            }
+        }
+
+        private void ListBoxGeometriesRight_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DeleteSelectedGeometries(listBoxGeometriesRight, mhx2Right);
             }
         }
     }
